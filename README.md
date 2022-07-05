@@ -10,13 +10,15 @@ Use Android Studio to run/install the project on an emulator or a physical Andro
 
 When running, it rapidly reads all data regarding tracks (external storage only), album and artist from MediaStore database.
 
-It organizes the info in two pages accorging to album (first) or artist (second). When one of these groups (album or artist) is selected, a screen will display a playlist including all songs falling in that category. When one the songs in the list is clicked, playlist will start playing in that order and starting in the clicked music track.
+It organizes the info in two pages according to album (first) or artist (second). When one of these groups (album or artist) is selected, a screen will display a playlist including all songs falling in that category. When one the songs in the list is clicked, playlist will start playing in that order and starting in the clicked music track.
 
 Once music is playing, a player will pop from the bottom of device's screen, showing current track's title and a play/stop toggle button. If song's name is clicked, this player will expand and cover the whole screen, showing an art in the center (if embedded in audio file), a previous button, a next button and a seekbar which tracks current time in the song. If this seekbar is dragged, system will go to that point in the song.
 
 This player screen is independent and will stay there, allowing user to navigate among the scanned music. Once the last song in the playlist ends, the expandable player screen will hide until a new playlist is selected.
 
 This player will remain playing the music int the background, even when the app is minized. It will stop if it is totally closed.
+
+![Example01](img/musicplayer-example01.gif)
 
 ## Technologies used
 <img src="https://4.bp.blogspot.com/-NnAkV5vpYuw/XNMYF4RtLvI/AAAAAAAAI70/kdgLm3cnTO4FB4rUC0v9smscN3zHJPlLgCLcBGAs/s1600/Jetpack_logo%2B%25282%2529.png" width="140" height="140" /> &nbsp; &nbsp; <img src="https://miro.medium.com/max/1400/1*o8Q_O-C6yGZQqW_2cdafoQ.png" width="200" height="140" />
@@ -27,7 +29,7 @@ The project follows a MVVM architecture with Clean Architecture. It is divided i
 
 ### Presentation Layer
 
-It contains the componentes related to the UI, like screen/fragments, and its state, stored in a ViewModel.
+It contains the components related to the UI, like screen/fragments, and its state, stored in a ViewModel.
 
 ### Domain Layer
 
@@ -43,11 +45,8 @@ The model contain all the classes representing the data.
 
 It contains the components to access the information required to make use of the application.
 
-**Local**:
-This package contains the implementation of the local database in Room, caching all the incoming data from the API. It has the the Entities and DAOs.
-
-**Remote**:
-Contains all the classes and interfaces to interact  with the API using Retrofit.
+**Storage**:
+This package contains the interfaces and implementations to access all data from MediaStore indexed from external storage.
 
 **Repository**:
-Here it is where the operations to fetch data take place, whether it comes from local or from a remote source.
+Here it is where the operations to fetch data take place, all implementations of repository interfaces are created here.
