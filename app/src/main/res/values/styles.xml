@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Toolbar -->
+    <style name="DefaultToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/primary</item>
+        <item name="titleTextColor">@color/font_light</item>
+    </style>
+
+    <style name="CollapsingToolbarExpanded" parent="TextAppearance.AppCompat.Medium">
+        <item name="titleTextColor">@color/font_light</item>
+    </style>
+
+    <style name="CollapsingToolbarCollapsed" parent="TextAppearance.AppCompat.Medium">
+        <item name="titleTextColor">@color/font_light</item>
+    </style>
+
+    <!-- NavigationTabLayout -->
+    <style name="NavigationTab" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/primary</item>
+        <item name="tabSelectedTextColor">@color/secondary</item>
+        <item name="tabIndicatorColor">@color/secondary</item>
+        <item name="tabTextAppearance">@style/NavigationTabTextAppearance</item>
+    </style>
+
+    <style name="NavigationTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/font_medium</item>
+    </style>
+
+</resources>

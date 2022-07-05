@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomMediaControl">
+        <attr name="customMediaControl_drawablePlay" format="reference"/>
+        <attr name="customMediaControl_drawableStop" format="reference"/>
+        <attr name="customMediaControl_drawablePrevious" format="reference"/>
+        <attr name="customMediaControl_drawableNext" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomSingleTrackControl">
+        <attr name="singleTrackControl_drawablePlay" format="reference"/>
+        <attr name="singleTrackControl_drawableStop" format="reference"/>
+    </declare-styleable>
+
+</resources>
